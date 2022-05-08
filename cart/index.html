@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./app_cart.css" />
+  </head>
+
+  <body>
+    <div class="contenido">
+
+      <!-- FICHA DE PRODUCTO -->
+      <div class="productos">
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="1"
+          data-name="prod 1"
+          data-sku="1001"
+          data-qty="1"
+          data-type="normal"
+          data-brandnew="true"
+        >
+          1001
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="2"
+          data-name="prod 2"
+          data-sku="1002"
+          data-qty="1"
+          data-type="preventa"
+          data-brandnew="true"
+        >
+          1002
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="3"
+          data-name="prod 3"
+          data-sku="1003"
+          data-qty="1"
+          data-type="normal"
+          data-brandnew="false"
+        >
+          1003
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="4"
+          data-name="prod 4"
+          data-sku="1004"
+          data-qty="1"
+          data-type="digital"
+          data-brandnew="true"
+        >
+          1004
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="5"
+          data-name="prod 5"
+          data-sku="1005"
+          data-qty="1"
+          data-type="normal"
+          data-brandnew="true"
+        >
+          1005
+        </a>
+
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="6"
+          data-name="prod 6"
+          data-sku="1006"
+          data-qty="1"
+          data-type="normal"
+          data-brandnew="true"
+        >
+          1006
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="7"
+          data-name="prod 7"
+          data-sku="1007"
+          data-qty="1"
+          data-type="preventa"
+          data-brandnew="true"
+        >
+          1007
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="8"
+          data-name="prod 8"
+          data-sku="1008"
+          data-qty="1"
+          data-type="normal"
+          data-brandnew="false"
+        >
+          1008
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="9"
+          data-name="prod 9"
+          data-sku="1009"
+          data-qty="1"
+          data-type="digital"
+          data-brandnew="true"
+        >
+          1009
+        </a>
+        <a
+          href="#"
+          class="cart cart__add"
+          data-id="10"
+          data-name="prod 10"
+          data-sku="1010"
+          data-qty="1"
+          data-type="normal"
+          data-brandnew="true"
+        >
+          1010
+        </a>
+      </div>
+
+
+      <!--  VIEW CART -->
+      <a href="#" class="cart" id="cart__delAll"> Delete All </a>
+
+      <div class="cards" id="vista"></div>
+
+      <template id="card_template">
+        <div class="card">
+          <div class="card_content">
+            <div class="card__toolbar">
+              <button class="card__toolbar_delete">delete</button>
+            </div>
+
+            <div class="card__header">
+              <h2 class="name">Name</h2>
+              <div class="line">
+                <p>Sku: <b class="sku"> Sku </b></p>
+              </div>
+              <p class="id">Id</p>
+            </div>
+            <div class="card__body">
+              <div class="line">
+                <p>Qty:</p>
+                <input type="number" class="qty" />
+              </div>
+              <div class="line">
+                <p>Type: <b class="type"> Type </b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+      
+    </div>
+
+    <script src="./app_cart.js"></script>
+  </body>
+</html>
