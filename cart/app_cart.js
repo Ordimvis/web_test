@@ -39,7 +39,7 @@
                         template = document.getElementById( this.template ),
                         fragmento = document.createDocumentFragment(),
                         clon,
-                        id , name, sku, qty, type ,
+                        id , name, sku, qty, type ,image,
                         card_delete ;
 
                     //  if()     //  Validar vista & template 
@@ -54,6 +54,8 @@
                         sku     = clon.querySelector(".sku") ; 
                         qty     = clon.querySelector(".qty") ; 
                         type    = clon.querySelector(".type") ; 
+                        image    = clon.querySelector(".image img") ;
+                        
         
                         card_delete = clon.querySelector(".card__toolbar_delete") ; 
                         
@@ -76,6 +78,7 @@
                         sku.innerHTML = item.sku ;
                         qty.value = item.qty ;
                         type.innerHTML = item.type ;
+                        image.setAttribute( 'src' ,  item.image ) ;
 
                         fragmento.appendChild( clon );
 
@@ -84,7 +87,7 @@
                     }) ;
                 } ,
 
-                addItem : function( p ) {
+                addItem : function( p , image ) {
                     // p.id , p.sku , p.name , p.qty
                     var qty = parseInt( p.qty, 10) ;
                     var brandnew = (p.brandnew == 'true') ;
@@ -92,7 +95,7 @@
                     if( idx >= 0 ) {
                         this.data.items[ idx ].qty += qty ;
                     } else {
-                        this.data.items.push( { 'id' : p.id , 'sku' : p.sku , 'name' : p.name , 'qty' : qty , 'type' : p.type , 'brandnew' : brandnew   } ) ;
+                        this.data.items.push( { 'id' : p.id , 'sku' : p.sku , 'name' : p.name , 'qty' : qty , 'type' : p.type , 'brandnew' : brandnew , 'image' : image  } ) ;
                     }
                     this.write(  ) ;
                 } , 
@@ -150,7 +153,10 @@
         userSelection.forEach(link => {
             link.addEventListener( 'click', (e) => {
                 e.preventDefault();
-                app_cart.addItem(  e.target.dataset ) ;
+
+                let new_image = e.target.querySelector("img").getAttribute( "src" ) ;
+
+                app_cart.addItem(  e.target.dataset , new_image ) ;
             });
         });
 

@@ -18,17 +18,17 @@ body {
 .productos {
     display: flex ;
     flex-flow: row ;
-    height: 40px ;
+    /* height: 40px ; */
     justify-content: space-around;
     align-items: center;
     background-color: chocolate;
 }
 
 .productos a {
-    height: 20px;
     line-height: 20px;
     padding: 0 30px; 
-    background-color: cadetblue;
+    background-color: white;
+    text-align: center;
    
 }
 
@@ -54,4 +54,32 @@ body {
     position: absolute ;
     right: 0;
     top: 0;
+}
+
+.qty {
+
+    color: red;
+}
+
+
+
+.card.producto {
+    background-color: aquamarine;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.card.producto h2 {
+    display: inline-block;
+    text-align: center;
+    padding: 0 0 1em 0;
+}
+.card.producto img {
+
+    width: 100%;
+}
+
+.cards .card img {
+
+    width: 200px;
 }
